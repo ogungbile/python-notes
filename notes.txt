@@ -1,0 +1,1119 @@
+Introduction to Python
+
+Python is a widely-used, interpreted, object-oriented, and high-level programming language with dynamic semantics, used for general-purpose programming.
+
+What makes Python so special?
+
+it's easy to learn
+it's easy to teach
+it's easy to use
+it's easy to understand
+it's easy to obtain, install and deploy
+
+python --version
+
+Python 3 is the newer (or to be more precise, the current) version of the language.
+
+All non-Linux users can download a copy at https://www.python.org/downloads/.
+
+Like many other programming languages, python also supports variables
+
+Variables
+
+a = 28
+
+a = 28   int
+b = 1.5    float
+c = "Hello!"  str
+d = True    bool
+e = None     NoneType
+
+x = 5
+    
+if (x > 2):
+	print("x")
+
+
+print("x is not greater than 2")
+
+
+
+Python Syntax compared to other programming languages
+
+Python was designed for readability, and has some similarities to the English language with influence from mathematics.
+
+Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.
+
+Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
+
+C:\Users\Your Name>python --version
+
+Python Syntax
+
+Execute Python Syntax
+Python syntax can be executed by writing directly in the Command Line:
+>>> print("Hello, World!")
+Hello, World!
+
+Python Indentation
+Indentation refers to the spaces at the beginning of a code line.
+Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
+Python uses indentation to indicate a block of code.
+
+Example
+if 5 > 2:
+  print("Five is greater than two!")
+
+The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.
+
+Python Variables
+In Python, variables are created when you assign a value to it:
+Example
+x = 5
+y = "Hello, World!"
+
+print(x)
+print(y)
+
+Variable names are case-sensitive.
+a = 4
+A = "Sally"
+#A will not overwrite a
+
+String variables can be declared either by using single or double quotes:
+x = "John"
+# is the same as
+x = 'John'
+
+Comments
+A remark inserted into the program, which is omitted at runtime, is called a comment.
+Comments are very important. They are used not only to make your programs easier to understand, but also to disable those pieces of code that are currently not needed (e.g., when you need to test some parts of your code only, and ignore others).
+You may want to put in a few words addressed not to Python but to humans, usually to explain to other readers of the code how the tricks used in the code work, or the meanings of the variables, and eventually, in order to keep stored information on who the author is and when the program was written.
+
+#This is a comment.
+print("Hello, World!")
+
+# This program evaluates the hypotenuse c.
+# a and b are the lengths of the legs.
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5  # We use ** instead of a square root.
+print("c =", c)
+
+Good, responsible developers describe each important piece of code, for example, by explaining the role of the variables. Although it must be stated that the best way of commenting variables is to name them in an unambiguous manner.
+
+For example, if a particular variable is designed to store an area of some unique square, the name square_area will obviously be better than aunt_jane.
+
+Marking fragments of code(you can use them to mark a piece of code that currently isn't needed for whatever reason)
+
+Multiline Comments
+Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:
+
+Python Variables
+Variables are containers for storing data values. A variable is a named location reserved to store values in the memory.
+
+Creating Variables
+Python has no command for declaring a variable.
+A variable is created the moment you first assign a value to it.
+Variables do not need to be declared with any particular type, and can even change type after they have been set.
+
+Casting
+If you want to specify the data type of a variable, this can be done with casting.
+x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+zend = float(3)  # z will be 3.0
+
+Variable Names
+A variable name must start with a letter or the underscore character
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+The value of a variable is what you have put into it
+Variable names are case-sensitive (age, Age and AGE are three different variables)(upper- and lower-case letters are treated as different )
+A variable name cannot be any of the Python keywords.
+Unlike in other languages, you don't need to declare variable in any special way.
+
+Python does not impose restrictions on the length of variable names, but that doesn't mean that a long variable name is always better than a short one.
+
+Python developers use snake case(snake_case) variable naming convention. We use underscore character after each word for a variable containing more than one word(eg. first_name, last_name, engine_rotation_speed). The example below is an example of standard naming of variables, underscore is required when the variable name is more than one word.
+
+Here are some correct, but not always convenient variable names:
+
+MyVariable
+i
+l
+t34
+Exchange_Rate
+counter
+days_to_christmas
+TheNameIsTooLongAndHardlyReadable
+_
+
+And now for some incorrect names:
+
+10t (does not begin with a letter)
+!important (does not begin with a letter)
+exchange rate (contains a space).
+
+ref https://peps.python.org/pep-0008/ for detailed info
+
+Some Keywords in Python
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+They are reserved because you mustn't use them as names: neither for your variables, nor functions, nor any other named entities you want to create.
+
+Python Variables - Assign Multiple Values
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+
+One Value to Multiple Variables
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+Unpack a Collection
+If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+Output Variables
+
+The Python print() function is often used to output variables.
+Example
+x = "Python is awesome"
+print(x)
+
+In the print() function, you output multiple variables, separated by a comma:
+
+Example
+x = "Python"
+y = "is"
+z = "awesome"
+print(x,y,z, sep="-")
+
+
+Python
+is
+awesome
+
+
+
+
+
+
+print(x, y, z, end="\n")
+print(t)
+
+
+You can also use the + operator to output multiple variables:
+x = "There are "
+y = 5
+z = "oranges"
+print(x + str(y)+ z)
+
+
+Python escape and newline characters
+
+print("The itsy bitsy spider\nclimbed up the waterspout.")
+print()
+print("Down came the rain\nand washed the spider out.")
+
+Keyword arguments
+print("My name is", "Python.", end=" ")
+print("Monty Python.")
+
+We said previously that the print() function separates its outputted arguments with spaces. This behavior can be changed, too.
+
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*", end="*\n")
+
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*", end="*\n")
+
+Ans.
+My_name_is*Monty*Python.*
+
+Global Variables
+Variables that are created outside of a function  are known as global variables.
+Global variables can be used by everyone, both inside of functions and outside.
+
+Example:
+Create a variable inside a function, with the same name as the global variable
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+Python Data Types
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool  (True, False)
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType 
+
+Getting the Data Type
+Print the data type of the variable x:
+x = 5
+print(type(x))
+
+Python Casting
+Converting one data type to another data type. We use int(), float(), str(), list, set When we do arithmetic operations string numbers should be first converted to int or float otherwise it will return an error. If we concatenate a number with a string, the number should be first converted to a string.
+
+Example
+# int to float
+num_int = 10
+print('num_int',num_int)         #num_int 10 
+num_float = float(num_int)
+print('num_float:', num_float)   # 10.0
+
+# float to int
+gravity = 9.81
+print(int(gravity))             # 9
+
+
+Python Operators
+
+Python divides the operators in the following groups:
+
+
+age = int(input("How old are you"))
+height = int(input("How tall are you"))
+
+if(not(age > 18) ):
+    print("you can vote")
+print("End of program")
+
+
+
+Arithmetic operators
+Assignment operators    =     +=  -= 
+Comparison operators <  >  == <=  >=
+Logical operators   and  or not 
+Identity operators    is, is not
+Membership operators in, not in
+Bitwise operators Bitwise operators are used to compare (binary) numbers:(&, |, ^, ~, <<, <<)
+
+Operators are used to perform operations on variables and values.
+BAsic Operators
++    Addition  print(-4. + 8)
+-    subtraction  print(4. - 8)
+*   Multiplication  print(2 * 3)
+/   Division  print(6. / 3)
+//  Integer division (floor division) the results are always rounded; print(6 // 3.)  
+%   Remainder (modulo)  print(14 % 4) 
+**    Exponentiation print(2. ** 3.)
+
+
+
+Function
+
+A function is a block of code that performs a specific task when the function is called (invoked). You can use functions to make your code reusable, better organized, and more readable. Functions can have parameters and return values.
+
+functions.py
+
+def square(x):
+	return x * x
+
+for i in range(10):
+	print(f"The square of {i} is {square(i)}")
+
+squares.py
+from functions import square
+
+for i in range(10):
+	print(f"The square of {i} is {square(i)}")
+
+OR
+import functions
+
+for i in range(10):
+	print(f"The square of {i} is {functions.square(i)}")
+
+You've come across functions many times so far, Now you'll learn how to write and use your own functions
+
+Reasons for writing functions
+
+if a particular fragment of the code begins to appear in more than one place, consider the possibility of isolating it in the form of a function
+
+if you're going to divide the work among multiple programmers, decompose the problem to allow the product to be implemented as a set of separately written functions packed together in different modules.
+
+How functions work
+
+when you invoke a function, Python remembers the place where it happened and jumps into the invoked function;
+
+the body of the function is then executed;
+
+reaching the end of the function forces Python to return to the place directly after the point of invocation.
+
+Types of Functions
+1. built-in functions which are an integral part of Python (such as the print() function ref https://docs.python.org/3/library/functions.html.
+2. the ones that come from pre-installed modules
+3. user-defined functions which are written by users for users ‒ you can write your own functions and use them freely in your code,
+4. the lambda functions
+
+
+Defining a Function
+
+When we make a function, we call it declaring/defining a function. When we start using  it, we call it calling or invoking a function. Function can be declared with or without parameters.
+
+def your_function(optional parameters):
+    # the body of the function
+
+You can define your own function using the def keyword and the following syntax:
+
+You can define a function which doesn't take any arguments, e.g.:
+........................................
+def message(): # defining a function
+    print("Hello") # body of the function
+ 
+message() # calling the function
+....................
+
+
+# syntax
+# Declaring a function
+def function_name():
+    codes
+    codes
+# Calling a function
+function_name()
+
+You can define a function which takes arguments, too, just like the one-parameter function below:
+...........................
+def hello(name): # defining a function
+    print("Hello,", name) # body of the function
+ 
+ 
+name = input("Enter your name: ")
+ 
+hello(name) # calling the function
+.................................................
+
+def message(what, c = "number"):
+    print("Enter", what, "number", number)
+ 
+message("telephone", c = "not number")
+message("price", 5)
+message("number", "number")
+..............................
+
+A function can have as many parameters as you want
+
+Don't forget:
+
+parameters live inside functions (this is their natural environment)
+arguments exist outside functions, and are carriers of values passed to corresponding parameters.
+
+You can pass arguments to a function using the following techniques:
+1. positional argument passing in which the order of arguments passed matters 
+2. keyword (named) argument passing in which the order of arguments passed doesn't matter
+3. a mix of positional and keyword argument passing 
+
+NB: It's important to remember that positional arguments mustn't follow keyword arguments.
+
+
+
+
+Returning a result from a function
+
+The return instruction has two different variants ‒ let's consider them separately.
+1. return without an expression
+
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+ 
+    print("Happy New Year!")
+
+
+
+
+
+
+
+Strings
+String in Python are shown as the variable type str. You can alsp include \ in your string to be able to include one of these quotes:
+>>> this_string = 'Simon\'s skateboard is in.'
+>>> this_string = "Simon's skateboard is in."
+>>> print(this_string)
+
+There are a number of other opeartors you can use with strings as well.
+>>> first_word = 'Hello'
+>>> second_word = 'There'
+>>> print(first_word + second_word)
+
+>>> print(first_word * 5)
+>>> print(len(first_word))
+
+You can index into strings. Python uses 0 indexing
+>>> first_word[0]
+
+String Methods
+Methods are like some of the functions you have already seen
+1. len("this")      print(len("this"))
+2. type(12)
+3. print("Hello World")
+
+these three above are functions -notice they use parentheses, and accept one or more arguments.
+A method in Python behaves similarly to a function . Methods actually are functions that are called using dot notation. For example, lower() is a string method that can be used like this, on a string called "sample string":
+
+>>> sample_string.lower()
+
+print("good MorNing SIR".find('M'))
+
+format()
+
+Example 1
+
+print("Mohammed has {} ballons".format(27))
+print
+
+Example 2
+
+animal = "dog"
+action = "bite"
+
+print("Does your {}{}".format(animal,action))
+print(f"")
+
+Example 3
+maria_string = "Maria loves {} and {}"
+print(maria_string.format("math","statistics"))
+a = "math"
+b = "statistics"
+print(f"Maria loves {a} and {b}")
+
+F-String Formatting
+
+Example 4
+
+name = "John"
+print(f"Hello, {name}")
+
+Example 5
+a = 5
+b = 3
+print(f"The sum of {a} and {b} is {a + b}")
+
+String method - split()
+the syntax for the split() method is
+
+string.split(sep,maxsplit)
+
+Example 6
+
+new_str = "The cow jumped over the man."
+print(new_str.split(' ',3))
+
+
+
+
+
+
+Python Collections 
+There are four collection data types in the Python programming language:
+
+1. List is a collection which is ordered and changeable. Allows duplicate members. val = [3, 45, 41, 67]
+val[0] = 9
+print(val)
+
+2. Tuple is a collection which is ordered and unchangeable. Allows duplicate members. m = (3, 45, 41, 67)
+m[3]
+
+3. Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members. mem = {3, 45, 41, 67,3}
+print(mem[3])
+print(mem[3])
+
+
+4. Dictionary is a collection which is ordered** and changeable. No duplicate members.{age:3, height:45, amount:41, weight:67}
+
+username = "Gbenga"
+password = "tobi"
+combin = username + " " + password
+combin2 = combin.split()
+print(tuple(combin2))
+print(combin2)
+
+list_of_random_things = [1, 3.4, 'a string', True]
+list_of_random_things[1] = 'one'
+
+print(list_of_random_things)
+[1, 'one', 'a string', True]
+
+print(list_of_random_things[3])
+list_of_random_things[-2]
+list_of_random_things[:2] [1, 'a string']
+
+Membership operator   in  not in 
+
+2.4 not in list_of_random_things 
+True
+
+'this' in 'this is a string'
+
+List Methods
+
+len()
+max()
+min()
+sorted()
+
+my_list = [1,2,3,4,5]
+my_list.append(6)
+my_list = [1,2,3,4,5,6]
+print(len(my_list))
+print(max(my_list))
+print(min(my_list))
+print(sorted(my_list))
+
+join method
+
+name = "-".join(["Garcia", "O'Kelly", "Davis"])
+
+print(name)
+
+append method
+
+3/04/2024
+
+#Dictionaries and Identity Operators
+#syntax
+
+A dictionary is a mutable data type that stores mappings of unique keys to values. Here's is a dictionary that stores elements and their atomic numbers
+
+elements={"hydrogen":1, "helium":2, "carbon":6}
+print(elements.items())
+
+in general, dictionaries look like key-value pairs, separated by commas:
+
+#{key1:value1, key2:value2, key3:value3, key4:value4, ...}
+
+Dictionaries are mutable, but their keys need to be any immutable type, like strings, integers, or tuples.
+
+It's not necessary for every key in a dictionary to have the same type. For example, the following dictionary is perfectly valid:
+
+random_dict = {"abc":1, 5:"hello"}
+
+This dictionary has two keys: "abc" and 5. The first key has a string type, and the second key has an integer type. And the dictionary has two values: 1 and "hello"
+
+We can look up values in the dictionary using square brackets '[]' around the key, like:
+
+dict_name[key]
+
+For example, in our random dictionary above, the value for random_dict["abc"] is 1, and the value for random_dict[5] is "hello".
+
+In our elements dictionary above, we could print out the atomic number mapped to helium like this:
+
+print(elements["helium"])
+This would printout 2
+
+We can also insert a new element into a dictionary as in this example:
+#insert a new element into a dictionary
+elements["lithium"] = 3
+
+print(elements)
+
+If we then executed print(elements), the output would be:
+{'hydrogen':1, 'carbon':6, 'helium':2, 'lithium':3}
+
+This illustrates how dictionaries are mutable
+
+What if we try to look up a key that is not in our dictionary, using the square brackets, like
+
+elements['dilithium']? This will give you "KeyError"
+
+
+We can check whether a key is in a dictionary the same way we check whether an element is in a list or set, using the in keyword.
+
+Dictionaries have a related method that's also useful, get. get looks up values in a dictionary, but unlike square brackets, get returns None(or a default value of your choice), if the key isn't found.
+
+print("carbon" in elements)
+print(elements.get("dilithium"))
+
+This would output:
+True
+None
+
+So if you expect lookups to sometimes fail, get might be a better tool than normal square bracket lookups, because errors can crash your program.
+
+Identity Operators
+
+keyword	| Operator
+--------------------------------------------
+is	| evaluates if both sides have the same identity
+
+is not	| evaluates if both sides have different identity
+
+You can check if a key returned None with the is operator. You can check for the opposite using is not:
+
+n = elements.get("dilitium")
+print(n is None)
+print(n is not None)
+
+this would output
+True
+False
+
+get with a Default value
+-------------------------
+
+>>elements.get('dilithium')
+None
+>>elements['dilithium']
+KeyError: 'dilithium'
+>>>elements.get('kryptonite','There\'s no such element!')
+"There's no such element!"
+
+Question
+What will the output of the following code be?
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a == b)   #True
+print(a is b)   #True
+print(a == c)   #True
+print(a is c)   #False
+
+Control Flow
+------------
+
+Control flow describes the order in which your lines of code are run. This order is usually different than the sequence in which the lines of code appear. Execution can flow from one place in the code to another.
+
+Special types of statements control how this execution flows. There are several tools in python we can use to affect our code's control flow:
+
+1. Conditional Statement
+2. Boolean Expressions
+3. For and While loops
+4. Break and Continue
+5. zip and Enumerate
+6. list Comprehension
+
+#Conditional Statements
+#If Statement
+#An if statement is a conditional statement that runs or skips #code based on whether a condition is true or false.
+
+phone_balance = 3
+bank_balance = 12
+
+if phone_balance < 5:
+    phone_balance += 10
+    bank_balance -= 10
+    print(f"phone balance: {phone_balance}, bank balance: {bank_balance}")
+    print("phone balance: {}, bank balance: {}".format(phone_balance,bank_balance))
+
+
+
+
+#if, Elif, Else
+---------------
+season = input("Enter the current season ")
+if season == 'spring':
+    print('plant the garden')
+elif season == 'summer':
+    print('water the garden!')
+elif season == 'fall':
+    print('harvest the garden!')
+elif season == 'winter':
+    print('stay indoors!')
+else:
+    print('unrecognized season')
+
+
+You decide you want to play a game where you are hiding a number from someone. Store this number in a variable called answer. Another user provides a number called guess. By comparing 'guess' to 'answer', you inform the user if their guess is too high or too low. 
+
+
+For Loops
+----------
+
+Python has two kinds of loops- for loops and while loops.
+A for loop is used to 'iterate', or do something repeatedly, over an iterable. An iterable is an object that can return one of its elements at a time. This can include sequence types, such as strings, lists, and tuples, as well as non-sequence types, such as dictionaries and files.
+
+Example
+--------
+Let's break down the components of a for loop, using this example with the list cities:
+
+cities = ['new york city', 'mountain view','chicago','los angeles']
+for city in cities:
+    print(city)
+print("Done!")
+
+Executing the code in the example above produces this output:
+
+new york city
+mountain view
+chicago
+los angeles
+Done!
+
+Using the range() Function with for Loops
+------------------------------------------
+range() is a built-in function used to create an iterable sequence of numbers. You will frequently use range() with a for loop to repeat an action a certain number of times. python programmers conventionally use i to iterate through the numbers.
+
+for i in range(3):
+    print("Hello!")
+
+Output:
+
+Hello!
+Hello!
+Hello!
+
+range(start=0, stop, step=1)
+The range() function takes three integer arguments, the first and the third are optional:
+The stop argument is 1 more than the last number of the sequence. this argument must be specified.
+
+Indenting Through Dictionaries with For Loops
+----------------------------------------------
+
+When you iterate through a dictionary using a for loop, doing it the normal way, like
+for n in some_dict,
+will only give you access to the keys in the dictionary-which is what you'd want in some situations. in other cases, you'd want to iterate through both the keys and values in the dictionary. Let's see how this is done in an example. Consider this dictionary that uses names of actors as keys and their characters as values.
+
+cast = {
+	"Jerry Senfeld": "Jerry Senfeld",
+	"Julia Loius-Dieyfus":"Elaine Benes",
+	"Jason Alexander": "George Custanza",
+	"Michael Richards": "Cosmo Kremer"
+	}
+
+iterating through it in a usual way with a for loop would give you just the keys, as shown below:
+for key in cast:
+     print(key)
+
+this outputs:
+
+Jerry Senfeld
+Julia Loius-Dieyfus
+Jason Alexander
+Michael Richards
+
+If you wish to iterate through both keys and values, you can use the built-in method items like this:
+
+for key, value in cast.items():
+    print("Actor: {} Role: {}".format(key,value))
+
+items is an awesome method that returns tuples of key, value pairs, which you can use to iterate over dictionaries in for loops.
+
+While Loops (while)
+--------------------
+for loops are an example of "definite iteration" meaning that the loop's body is run a predefined number of times. This differs from "indefinite iteration" which is when a loop repeats an unknown number of times and ends when some condition is met, which is what happens in a while loop. Here's an example of a while loop.
+...............................................
+card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
+hand = []
+
+##adds the Last element of the card_deck list to the 
+## hand list
+## until the values in hand add up to 17 or more 
+
+while sum(hand) < 17:
+    hand.append(card_deck.pop())
+print(hand)
+.........................................
+
+sum returns the sum of the elements in a list, and pop is a list method that removes the last element from a list and returns it.
+
+
+Break, Continue
+----------------
+Sometimes we need more control over when a loop should end, or skip an iteration. In these cases, we use the break and continue keywords, which can be used in both for and while loops.
+
+break terminates a loop
+continue skips one iteration of a loop
+
+print from 1-10 and skip 3 and 4
+
+for i in range(1,11):
+    if i == 5
+        break
+    print(i)
+
+
+In the example below, we iterate through a list of foods and increment account if the food is a fruit. Here, we terminate the iteration if the food is not found in fruit. Otherwise, we add one to fruit count. So when food is humus or toast in this loop, the rest of the loop is completely skipped.
+.........................................
+fruit = ["orange", "strawberry", "apple"]
+foods = ["apple", "apple", "humus", "toast"]
+fruit_count = 0
+for food in foods:
+    if food not in fruit:
+        print("Not a fruit")
+        continue
+    fruit_count +=1
+    print("Found a fruit!")
+print("Total fruit: ", fruit_count)
+...........................................
+
+output
+Found a fruit!
+Found a fruit!
+Not a fruit
+Not a fruit
+Total fruit: 2
+
+Question : Perform a linear search to find a name in the list
+
+# Define a list of names
+names = ["Alice", "Bob", "Charlie", "David", "Eve"]
+
+# Prompt the user to enter a name
+search_name = input("Enter a name to search for: ")
+
+# Perform a linear search to find the name in the list
+found = False
+index = 0
+while index < len(names):
+    if names[index] == search_name:
+        found = True
+        break
+    index += 1
+
+# Print the result
+if found:
+    print(f"{search_name} is found at index {index}.")
+else:
+    print(f"{search_name} is not found in the list.")
+
+
+
+Question Break
+
+Write a loop with a break statement to create a string, news_ticker, that is exactly 140 characters long. You should create the news ticker by adding headlines from the headlines list, inserting a space in between each headline. If necessary, truncate the last headline in the middle so that news_ticker is exactly 140 characters long.
+
+headlines = ["Local Bear Eaten by Man",
+"Legislature Announces New Laws",
+"Peasant Discovers Violence Inherent in System",
+"Cat Rescues Fireman Stuck in Tree",
+"Brave Knight Runs Away",
+"Papperbok Review: Totally Triffic"]
+
+news_ticker = ""
+for head in headlines:
+    if len(news_ticker) > 140:
+        break
+    news_ticker += head
+
+print(news_ticker[:140])
+
+news_ticker = ""
+for headline in headlines:
+    news_ticker += headline + " "
+    if len(news_ticker) >= 140:
+        news_ticker = news_ticker[:140]
+        break
+
+print(news_ticker)
+
+
+Question Create Usernames
+
+Write a for loop that iterates over the names list to create a usernames list. To create a username for each name, make everything lowercase and replace spaces with underscores. Running your for loop over the list:
+
+names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+
+the usernames list should look like this:
+
+["joey_tribbiani", "monica_geller", "chandler_bing", "phoebe_buffay"]
+
+usernames = []
+for name in names:
+    usernames.append(name.lower().replace(" ", "_"))
+
+print(usernames)
+
+Solution 2:
+
+usernames = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+
+for i in range(len(usernames)):
+    usernames[i] = usernames[i].lower().replace(" ","_")
+
+print(usernames)
+
+Question: Create an HTML List
+
+Write some code, including a for loop, that iterates over a list of strings and creates a single string, html_str, which is an HTML list. For example, if the list is items = ['first string', 'second string'] , printing html_str should output 
+
+<ul>
+<li>first string</li>
+<li>second string</li>
+</ul>
+
+Solution
+
+items = ['first string', 'second string']
+html_str = "<ul>\n"
+
+for item in items:
+    html_str += "<li>{}</li>\n".format(item)
+
+html_str += "</ul>"
+
+print(html_str)
+
+List Comprehensions
+-------------------
+
+In Python, you can create lists really quickly and concisely with list comprehensions. This example from earlier:
+
+cities = ['new york city', 'mountain view','chicago','los angeles']
+
+capitalized_cities = []
+for city in cities:
+    capitalized_cities.append(city.title())
+
+can be reduced to:
+
+capitalized_cities = [city.title() for city in cities]
+num = [a for a in range[1,11]]
+print(num)
+
+Conditionals in List Comprehension
+------------------------------------
+
+You can also add conditionals to list comprehensions(listcomps), After the iterable, you can use the if keyword to check a condition in each iteration.
+
+square = [x**2 for x in range(9) if x%2 == 0]
+
+The code above sets squares equal to the list [0, 4, 16, 36, 64], as x to the power of 2 is only evaluated if x is even. if you want to add an else, you will get a syntax error doing this. if you would like to add else, you have to move the conditionals to the beginning of the listcomp, right after the expression, like this.
+
+square = [x**2  if x % 2 == 0 else x + 3 for x in range(9)]
+
+Question
+
+Filter only negative and zero in the list using list comprehension
+numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
+
+numb = [x for x in numbers if x<=0]
+
+Question
+Flatten the following list of lists of lists to a one dimensional list :
+list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
+
+output
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Question: Extract First Names
+
+use a list comprehension to create a new list first_names containing just the first names  in lowercase.
+
+s = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smith"]
+
+f_n = [ fn.split(" ")[0].lower() for fn in s]
+
+fn_s = [Rick, Sanchez]
+fn_s[0]
+
+
+Exception
+
+When an error occurs, or exception as we call it, Python will normally stop and generate an error message.
+
+These exceptions can be handled using the try statement:
+
+try:
+  print(x)
+except:
+  print("An exception occurred")
+
+>>>10 * (1/0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>>4 + spam*3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'spam' is not defined
+>>>'2' + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+
+
+The try-except branch
+
+try:
+    value = int(input('Enter a natural number: '))
+    print('The reciprocal of', value, 'is', 1/value)        
+except:
+    print('I do not know what to do.')
+
+Let us summarize what we talked about:
+
+1. any part of the code placed between try and except is executed in a very special way – any error which occurs here won't terminate program execution. Instead, the control will immediately jump to the first line situated after the except keyword, and no other part of the try branch is executed;
+2. the code in the except branch is activated only when an exception has been encountered inside the try block. There is no way to get there by any other means;
+3. when either the try block or the except block is executed successfully, the control returns to the normal path of execution, and any code located beyond in the source file is executed as if nothing happened.
+
+
+Some Common Exceptions
+-------------------------
+
+ZeroDivisionError
+
+This appears when you try to force Python to perform any operation which provokes division in which the divider is zero, or is indistinguishable from zero. Note that there is more than one Python operator which may cause this exception to raise. Can you guess them all?
+
+Yes, they are: /, //, and %.
+
+ValueError
+
+Expect this exception when you're dealing with values which may be inappropriately used in some context. In general, this exception is raised when a function (like int() or float()) receives an argument of a proper type, but its value is unacceptable.
+
+TypeError
+This exception shows up when you try to apply a data whose type cannot be accepted in the current context. Look at the example
+	short_list = [1]
+	one_value = short_list[0.5]
+
+AttributeError
+
+This exception arrives – among other occasions – when you try to activate a method which doesn't exist in an item you're dealing with. For example:
+
+	short_list = [1]
+	short_list.append(2)
+	short_list.depend(3)
+
+SyntaxError
+This exception is raised when the control reaches a line of code which violates Python's grammar.
+
+Raise an exception
+As a Python developer you can choose to throw an exception if a condition occurs.
+
+To throw (or raise) an exception, use the raise keyword.
+
+Example
+Raise an error and stop the program if x is lower than 0:
+
+x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+
+Lambda Expressions
+-----------------
+
+You can use lambda expressions to create anonymous functions. That is, functions that don't have a name. They are helpful for creating quick functions that aren't needed later in your code. A lambda function can take any number of arguments, but can only have one expression.
+
+With a lambda expression, this function:
+
+def multiply(x,y):
+    return x*y
+
+can be reduced to:
+
+multiply = lambda x,y : x*y
+
+
